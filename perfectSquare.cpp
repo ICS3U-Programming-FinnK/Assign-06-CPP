@@ -2,8 +2,8 @@
 // Created on: December 13th, 2023
 // this program asks for the user to input numbers
 // and it will display if the number is a perfect square.
-#include <iostream>
 #include <cmath>
+#include <iostream>
 #include <vector>
 // Checking if the input is a array
 std::vector<int> find_perfect_squares(std::vector<int> numbers) {
@@ -49,13 +49,13 @@ int main() {
     try {
         numbers.push_back(std::stoi(input));
     } catch (const std::invalid_argument& ia) {
-        std::cerr << "Invalid argument: " << ia.what() << '\n';
+        std::cerr << "Invalid input. What you entered is not a number: " << ia.what() << '\n';
     } catch (const std::out_of_range& oor) {
         std::cerr << "Out of Range error: " << oor.what() << '\n';
     }
     // Printing the list of perfect squares to the user
-        std::vector<int>
-            perfect_squares = find_perfect_squares(numbers);
+    std::vector<int>
+        perfect_squares = find_perfect_squares(numbers);
     std::cout << "These numbers are perfect squares:";
     for (int num : perfect_squares) {
         std::cout << " " << num;
